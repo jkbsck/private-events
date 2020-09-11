@@ -24,3 +24,7 @@ Things you may want to cover:
 * ...
 
 GIT TEST
+
+-------------------------------------------------------------------------------
+
+In this app users can create their own events and attend events of other users.
