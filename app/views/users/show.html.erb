@@ -1,4 +1,7 @@
 <div class="titles">
   <h1>USERS#SHOW.view</h1>
 </div>
-<%= User.find(params[:id]).username %>
+<div class="users">
+  ID: <%= User.find(params[:id]).id %><br>
+  USERNAME: <%= User.find(params[:id]).username %>
+</div>
