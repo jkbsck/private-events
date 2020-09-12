@@ -4,11 +4,16 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new
-    if @ser.save
-      redirect_to index_path
+    @user = User.new(user_params)
+    @user.save
+    redirect_to user_path(@user)
   end
 
   def show
   end
+
+  private
+    def user_params
+      params.require(:user).permit(:username)
+    end
 end

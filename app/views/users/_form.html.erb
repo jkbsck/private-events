@@ -1,0 +1,12 @@
+<h3>Enter your username</h3>
+
+<%= form_with model: @user do |form| %>
+  <div class="username">
+    <%= form.label :username %>
+    <%= form.text_field :username %>
+  </div>
+
+  <div class="submit">
+    <%= form.submit "Sign Up" %>
+  </div>
+<% end %>
