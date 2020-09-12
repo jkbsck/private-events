@@ -1,0 +1,9 @@
+<p id=”alert”><%= alert %></p>
+<h1>Sessions#new</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+<div class="login">
+  <%= form_tag sessions_path do |form| %>
+    <%= label_tag :username %>
+    <%= text_field_tag :username %>
+  <% end %>
+</div>

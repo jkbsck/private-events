@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <div class="session">
+      <% if current_user %>
+        <%= current_user.username %> is logged in
+        <%= link_to 'Log Out', sessions_destroy_path%>
+      <% else %>
+        <%= link_to 'Log In', new_session_path %>
+        <%= link_to 'Sign Up', new_user_path %>
+      <% end %>
+      <%= link_to 'MAIN PAGE', users_path %>
+    </div>
     <%= yield %>
   </body>
 </html>
