@@ -13,3 +13,42 @@
  *= require_tree .
  *= require_self
  */
+
+ div {
+  /*border: solid 1px;*/
+}
+
+.navbar {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  background: linear-gradient(45deg, #a55, white, #99c);
+  border-radius: 30px;
+  text-c;
+}
+
+.session {
+  display: flex;
+  /*background: linear-gradient(-45deg, white, #999);*/
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.session-items {
+  padding: 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  flex: 10;
+  /*background: linear-gradient(45deg, white, #999);*/
+}
+
+.menu-items {
+  padding: 10px;
+}
+
+a {
+  color: rgb(1, 21, 59);
+}
