@@ -10,6 +10,9 @@
   </head>
 
   <body>
+    <p class="flash">
+      <%= flash.notice %>
+    </p>
     <div class="session">
       <% if current_user %>
         <%= current_user.username %> is logged in
