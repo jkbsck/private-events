@@ -1,2 +1,14 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<div class="event-show">
+  <div class="event-description">
+    <h5>DESCRIPTION: </h5>
+    <h2>
+      <%= Event.find(params[:id]).description %>
+    </h2>
+  </div>
+  <div class="event-date">
+    <h5>DATE: </h5>
+    <h3>
+      <%= Event.find(params[:id]).date %>
+    </h3>
+  </div>
+</div>
