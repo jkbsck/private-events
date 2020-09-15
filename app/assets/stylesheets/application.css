@@ -58,7 +58,7 @@ a {
 }
 
 .users {
-  background-color: cornsilk;
+  background-color: rgb(233, 207, 104);
 }
 
 .event-description {
@@ -80,9 +80,32 @@ a {
 }
 
 h5 {
-  background-color: rgb(111, 221, 223);
+  background-color: rgba(255, 255, 255, 0.698);
   border-style: groove;
   border-radius: 10px;
   text-align: center;
   padding: 5px 0 5px 0;
+}
+
+.events {
+  margin: 40px;
+}
+
+.event {
+  padding: 10px;
+  margin: 0 20px 10px 0;
+  background-color: rgb(245, 244, 229);
+  border-radius: 15px;
+  border-style: outset;
+  border-color: rgb(1, 16, 29);
+}
+
+.user-events {
+  padding: 10px;
+  background-color: floralwhite;
+}
+
+.event-form {
+  padding: 10px;
+  border: 1px;
 }

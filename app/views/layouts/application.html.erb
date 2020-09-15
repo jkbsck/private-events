@@ -37,8 +37,13 @@
         <% end %>
       </div>
       <div class="menu">
+        <% if current_user %>
+          <div class="menu-items">
+            <%= link_to 'YOUR PROFILE', user_path(current_user) %>
+          </div>
+        <% end %>
         <div class="menu-items">
-          <%= link_to 'MAIN PAGE', users_path %>
+          <%= link_to 'MAIN PAGE', events_path %>
         </div>
         <div class="menu-items">
           <%= link_to 'NUDES', users_path %>

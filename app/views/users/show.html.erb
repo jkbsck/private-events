@@ -4,8 +4,11 @@
 <div class="users">
   ID: <%= User.find(params[:id]).id %><br>
   USERNAME: <%= User.find(params[:id]).username %><br>
-  EVENTS: <% User.find(params[:id]).events.each do |event| %>
-  <%= event.date %> -
-  <%= event.description %>
+  EVENTS: <% User.find(params[:id]).events.each do |event| %><br>
+    <div class="user-events">
+      <%= event.date %> -
+      <%= event.description %>
+    </div>
   <% end %>
+  <%= render partial: 'events/form' %>
 </div>
