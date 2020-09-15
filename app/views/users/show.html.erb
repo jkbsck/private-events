@@ -3,5 +3,9 @@
 </div>
 <div class="users">
   ID: <%= User.find(params[:id]).id %><br>
-  USERNAME: <%= User.find(params[:id]).username %>
+  USERNAME: <%= User.find(params[:id]).username %><br>
+  EVENTS: <% User.find(params[:id]).events.each do |event| %>
+  <%= event.date %> -
+  <%= event.description %>
+  <% end %>
 </div>
