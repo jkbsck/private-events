@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'events/new'
-  get 'events/create'
-  get 'events/show'
-  get 'events/index'
+  # get 'events/new'
+  # get 'events/create'
+  # get 'events/show'
+  # get 'events/index'
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/destroy'

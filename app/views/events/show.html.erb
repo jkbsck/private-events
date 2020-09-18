@@ -10,5 +10,9 @@
     <h3>
       <%= Event.find(params[:id]).date %>
     </h3>
+    <h5>HOST: </h5>
+    <h3>
+      <%= Event.find(params[:id]).creator.username %>
+    </h3>
   </div>
 </div>

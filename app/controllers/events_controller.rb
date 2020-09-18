@@ -4,11 +4,14 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = User.find(session[:user_id]).events.build(event_params)
+    @event = current_user.events.build(event_params)
+    #@event.creator_id = 37
     if @event.save
-      redirect_to events_show_path(@event), notice: 'Event created successfully.'
+      redirect_to events_path, notice: 'Event created successfully.'
     else
-      redirect_to events_new_path, notice: "Failed to create event!"
+      #render :new, notice: "Failed to create event!"
+      flash.now[:danger] = @event.errors.full_messages
+      render :new
     end
   end
 
