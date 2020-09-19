@@ -67,12 +67,23 @@ a {
   border-radius: 12px;
   border-style: outset;
   border-color: rgb(2, 92, 93);
+  text-align: center;
 }
 
 .event-date {
   padding: 10px;
-  margin: -15px 20px 20px 70%;
+  margin: -15px 70% 20px 5%;
   background-color: rgb(248, 205, 245);
+  border-radius: 25px;
+  border-style: outset;
+  border-color: rgb(2, 92, 93);
+  text-align: center;
+}
+
+.event-attendees {
+  padding: 10px;
+  margin: -270px 20px 20px 70%;
+  background-color: rgb(205, 248, 233);
   border-radius: 25px;
   border-style: outset;
   border-color: rgb(2, 92, 93);

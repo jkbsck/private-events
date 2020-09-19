@@ -15,4 +15,12 @@
       <%= Event.find(params[:id]).creator.username %>
     </h3>
   </div>
+  <div class="event-attendees">
+    <h5>ATTENDEES: </h5>
+    <h2>
+      <% Event.find(params[:id]).attendees.each do |attendee| %>
+        <%= attendee.username %>
+      <% end %>
+    </h2>
+  </div>
 </div>
