@@ -99,7 +99,17 @@ h5 {
 }
 
 .events {
+  display: flex;
+  align-content: stretch;
   margin: 40px;
+}
+
+.events-past {
+  margin-left: 5%;
+}
+
+.events-upcoming {
+  margin-left: 15%;
 }
 
 .event {
@@ -119,4 +129,21 @@ h5 {
 .event-form {
   padding: 10px;
   border: 1px;
+}
+
+.list-of-events {
+  display: flex;
+  margin: 20px;
+  background-color: gainsboro;
+  align-items: flex-start;
+}
+
+.events-created {
+  margin: 20px;
+  background-color: lightcyan;
+}
+
+.events-attended {
+  margin: 20px;
+  background-color: rgb(250, 234, 230);
 }

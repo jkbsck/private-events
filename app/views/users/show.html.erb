@@ -4,10 +4,47 @@
 <div class="users">
   ID: <%= User.find(params[:id]).id %><br>
   USERNAME: <%= User.find(params[:id]).username %><br>
-  EVENTS: <% User.find(params[:id]).events.each do |event| %><br>
-    <div class="user-events">
-      <%= event.date %> -
-      <%= event.description %>
+  <div class="list-of-events">
+    <div class="events-created">
+      EVENTS CREATED (PAST): <% User.find(params[:id]).events.each do |event| %><br>
+        <% if event.date.past? %>
+          <div class="user-events">
+            <%= event.date %> -
+            <%= event.description %>
+          </div>
+        <% end %>
+      <% end %>
     </div>
-  <% end %>
+    <div class="events-created">
+      EVENTS CREATED (UPCOMING): <% User.find(params[:id]).events.each do |event| %><br>
+        <% unless event.date.past? %>
+          <div class="user-events">
+            <%= event.date %> -
+            <%= event.description %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="events-attended">
+      EVENTS ATTENDED (PAST): <% User.find(params[:id]).attended_events.each do |event| %><br>
+        <% if event.date.past? %>
+          <div class="user-events">
+            <%= event.date %> -
+            <%= event.description %>
+          </div>
+        <% end %>
+      <% end %>
+    </div> 
+    <div class="events-attended">
+      EVENTS ATTENDED (UPCOMING): <% User.find(params[:id]).attended_events.each do |event| %><br>
+        <% unless event.date.past? %>
+          <div class="user-events">
+            <%= event.date %>
+            <%= event.description %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
