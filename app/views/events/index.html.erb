@@ -6,6 +6,7 @@
     <div class="events">
       <div class="events-past">
         <h3>PAST EVENTS:</h3>
+        total(<%= Event.past.all.count %>)<br><br>
         <% @events.each do |event| %>
           <% if event.date.past? %>
             <div class="event">
@@ -19,6 +20,7 @@
 
       <div class="events-upcoming">
         <h3>UPCOMING EVENTS:</h3>
+        total(<%= Event.upcoming.all.count %>)<br><br>
         <% @events.each do |event| %>
           <% unless event.date.past? %>
             <div class="event">
@@ -32,3 +34,5 @@
     </div>
   </div>
 </div>
+
+
