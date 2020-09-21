@@ -24,3 +24,15 @@
     </h2>
   </div>
 </div>
+
+<div class="invitations">
+  <%= form_with model: @attendance do |form| %>
+    <div class="field event-form">
+    <%= form.label "username" %>
+    <%= form.text_field :attendee %>
+  </div>
+  <div class="actions event-form">
+    <%= form.submit "Create" %>
+  </div>
+  <% end %>
+</div>

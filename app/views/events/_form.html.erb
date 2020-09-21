@@ -10,6 +10,15 @@
     <%= form.date_field :date %>
   </div>
 
+  <!--<div class="field event-form">WHO YOU WAN TO INVITE?<br><br>
+    <% User.all.each do |user| %>
+      <% unless user == current_user %>
+        <%= check_box_tag(:attendee) %>
+        <%= label_tag(:attendee, user.username) %>
+      <% end %>
+    <% end %>
+  </div>-->
+
   <div class="actions event-form">
     <%= form.submit "Create" %>
   </div>
